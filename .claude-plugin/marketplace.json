@@ -1,0 +1,30 @@
+{
+  "name": "claude-wrap",
+  "owner": {
+    "name": "RabbitHZ"
+  },
+  "metadata": {
+    "description": "PTY wrapper for Claude Code CLI — filters Kitty Keyboard Protocol sequences that break IME input (Korean, Japanese, etc.)",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "claude-wrap",
+      "source": {
+        "source": "github",
+        "repo": "RabbitHZ/claude-wrap",
+        "ref": "main"
+      },
+      "description": "PTY wrapper for Claude Code CLI — filters Kitty Keyboard Protocol sequences that break IME input (Korean, Japanese, etc.)",
+      "version": "0.1.0",
+      "author": {
+        "name": "RabbitHZ"
+      },
+      "homepage": "https://github.com/RabbitHZ/claude-wrap",
+      "repository": "https://github.com/RabbitHZ/claude-wrap",
+      "license": "MIT",
+      "keywords": ["claude", "claude-code", "ime", "korean", "kitty", "terminal", "pty"],
+      "category": "productivity"
+    }
+  ]
+}
