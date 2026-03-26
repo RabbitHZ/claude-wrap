@@ -1,13 +1,13 @@
 {
   "postInstall": [
     {
-      "command": "[ -d .venv ] || python3 -m venv .venv"
+      "command": "[ -d ~/.claude-wrap ] || python3 -m venv ~/.claude-wrap"
     },
     {
-      "command": ".venv/bin/python -m pip install git+https://github.com/RabbitHZ/claude-wrap.git"
+      "command": "~/.claude-wrap/bin/python -m pip install -q git+https://github.com/RabbitHZ/claude-wrap.git"
     },
     {
-      "command": "VENV_BIN=\"$(pwd)/.venv/bin/claude-wrap\"; SHELL_RC=\"\"; case \"$SHELL\" in */zsh) SHELL_RC=\"$HOME/.zshrc\" ;; */bash) SHELL_RC=\"$HOME/.bashrc\" ;; */fish) SHELL_RC=\"$HOME/.config/fish/config.fish\" ;; esac; [ -n \"$SHELL_RC\" ] && { grep -q \"alias claude='\" \"$SHELL_RC\" || echo \"alias claude='$VENV_BIN'\" >> \"$SHELL_RC\"; }"
+      "command": "SHELL_RC=\"\"; case \"$SHELL\" in */zsh) SHELL_RC=\"$HOME/.zshrc\" ;; */bash) SHELL_RC=\"$HOME/.bashrc\" ;; */fish) SHELL_RC=\"$HOME/.config/fish/config.fish\" ;; esac; [ -n \"$SHELL_RC\" ] && { grep -q \"alias claude='\" \"$SHELL_RC\" || echo \"alias claude='$HOME/.claude-wrap/bin/claude-wrap'\" >> \"$SHELL_RC\"; echo \"alias added to $SHELL_RC\"; }"
     }
   ],
   "hooks": {}
