@@ -1,0 +1,10 @@
+{
+  "postInstall": [
+    {
+      "command": "pip install git+https://github.com/RabbitHZ/claude-wrap.git"
+    },
+    {
+      "command": "grep -q \"alias claude='claude-wrap'\" ~/.zshrc || echo \"alias claude='claude-wrap'\" >> ~/.zshrc"
+    }
+  ]
+}
